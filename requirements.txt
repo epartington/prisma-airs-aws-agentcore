@@ -1,0 +1,17 @@
+# Core runtime
+strands-agents>=0.1.0
+bedrock-agentcore>=0.1.0
+boto3>=1.35.0
+
+# Demo server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# AIRS client
+requests>=2.32.0
+
+# Attack dashboard
+rich>=13.7.0
+
+# Optional: notebook tutorials
+# jupyter>=1.0.0

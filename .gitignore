@@ -1,0 +1,28 @@
+# Credentials — NEVER commit these
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Test results (may contain sensitive scan IDs or payloads)
+results/security_report.json
+results/security_report.txt
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+/tmp/
