@@ -101,7 +101,7 @@ pip install -r requirements.txt
 
 | Service | What You Need |
 |---------|--------------|
-| **Prisma Cloud** | Account with AI Security module enabled |
+| **Prisma AIRS** | Account with AI Security module enabled |
 | **Prisma AIRS** | API key + a configured Security Profile |
 | **AWS** | Account with Bedrock enabled in your target region |
 | **Bedrock** | Model access for `claude-haiku-4-5` (cross-region inference) |
@@ -129,10 +129,10 @@ nano .env   # or: code .env
 The four **required** exports are:
 
 ```bash
-# 1. Prisma AIRS API key (from Prisma Cloud → AI Security → API Keys)
+# 1. Prisma AIRS API key (from Prisma AIRs → AI Security → API Keys)
 export PRISMA_AIRS_API_KEY="your-key-here"
 
-# 2. Prisma AIRS Security Profile name (from Prisma Cloud → AI Security → Profiles)
+# 2. Prisma AIRS Security Profile name (from Prisma AIRs → AI Security → Profiles)
 export PRISMA_AIRS_PROFILE_NAME="your-profile-name"
 
 # 3 & 4. AWS credentials (for Bedrock model calls)
@@ -372,7 +372,7 @@ fail "AIRS API not reachable or returned unexpected response"
 **Cause:** `PRISMA_AIRS_API_KEY` is wrong or expired.
 
 **Fix:**
-1. Log in to Prisma Cloud
+1. Log in to Prisma AIRs
 2. Go to **AI Security → API Keys**
 3. Generate a new key and update `.env`
 4. Re-run `source .env && ./start_demo.sh --check`
@@ -388,7 +388,7 @@ fail "AIRS API not reachable or returned unexpected response"
 **Cause:** `PRISMA_AIRS_PROFILE_NAME` doesn't match any profile in your tenant.
 
 **Fix:**
-1. Go to **Prisma Cloud → AI Security → Profiles**
+1. Go to **Prisma AIRs → AI Security → Profiles**
 2. Copy the exact profile name (case-sensitive)
 3. Update `PRISMA_AIRS_PROFILE_NAME` in `.env`
 
@@ -501,7 +501,7 @@ prisma-airs-aws-agentcore/
 - [Prisma AIRS API Documentation](https://pan.dev/ai-runtime-security/)
 - [AWS Bedrock AgentCore Samples](https://github.com/awslabs/agentcore-samples)
 - [Strands Agents Framework](https://strandsagents.com)
-- [Prisma Cloud Console](https://app.prismacloud.io)
+- [Prisma AIRs Console](https://stratacloudmanager.paloaltonetworks.com/ai-security)
 
 ---
 
